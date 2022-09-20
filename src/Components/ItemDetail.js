@@ -1,11 +1,19 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import Spinner from './Spinner';
+
 import { DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit } from './styles';
+import Button from 'react-bootstrap/Button';
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
+   
 
     const onAdd = (qty) => {
         alert("Usted selecciono " + qty + " items.");
+        setItemCount(qty);
+       
     }
 
     return (
@@ -24,7 +32,13 @@ const ItemDetail = ({ item }) => {
                         <Price>$ {item.cost}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoCont>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    {
+                        itemCount === 0
+                        ?  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        :  <Link to= '/cart' ><Button variant="warning">Carrito</Button></Link>
+
+                    }
+                    
                 </DetailDiv>
             </DetailCont>
             : <Spindit><Spinner /></Spindit>
