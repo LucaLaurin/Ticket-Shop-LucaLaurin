@@ -6,7 +6,7 @@ import { faFaceGrinWink }  from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { Container, Logo, NavItem, ItemL, ItemC, ItemR } from './styles';
 
-function NavBar() {
+export const NavBar = () => {
   return (
     <Container>
       <ItemL>

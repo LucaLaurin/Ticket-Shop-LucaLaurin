@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
-import { Countcont, Countamount } from './styles';
+import { Countcont, Countamount, ButtonCount } from './styles';
 
-const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
+export const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     const [numero, setNumero] = useState(0);
 
     useEffect(() => {
-        setNumero(initial);
+           setNumero(initial);  
     },[]);
 
     const increment = () => {
@@ -23,13 +23,13 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
  
     return (
         <Countcont>
-            <button onClick={increment}> + </button> 
+            <ButtonCount onClick={increment}> + </ButtonCount> 
             <Countamount> {numero} </Countamount> 
-            <button onClick={decrement}> - </button> 
+            <ButtonCount onClick={decrement} > - </ButtonCount> 
             {
-                stock
-                ?  <button onClick={() => onAdd(numero)}>  Add to Cart </button>
-                :  <button disable> Add to Cart </button>
+                stock && numero
+                ?  <ButtonCount onClick={() => onAdd(numero)}>  Add to Cart </ButtonCount>
+                :  <ButtonCount disable> Add to Cart </ButtonCount>
             }
         </Countcont>
     );

@@ -1,18 +1,21 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
+import { ItemCount } from './ItemCount';
+import { CartContext } from './CartContext';
 import Spinner from './Spinner';
 
 import { DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit } from './styles';
 import Button from 'react-bootstrap/Button';
 
-const ItemDetail = ({ item }) => {
+export const ItemDetail = ({ item }) => {
+    const { addItem } = useContext(CartContext);
     const [itemCount, setItemCount] = useState(0);
    
 
-    const onAdd = (qty) => {
-        alert("Usted selecciono " + qty + " items.");
-        setItemCount(qty);
+    const onAdd = (quantity) => {
+        alert("Usted selecciono " + quantity + " items.");
+        addItem(item, quantity);
+        setItemCount(quantity);
        
     }
 
@@ -29,13 +32,13 @@ const ItemDetail = ({ item }) => {
                     <InfoCont>
                         <Title>{item.name}</Title>
                         <Desc>{item.description}</Desc>
-                        <Price>$ {item.cost}</Price>
+                        <Price>$ {item.cost.toFixed(2)}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoCont>
                     {
                         itemCount === 0
                         ?  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
-                        :  <Link to= '/cart' ><Button variant="warning">Carrito</Button></Link>
+                        :  <Link to= '/cart' ><Button variant="warning">Ir al carrito</Button></Link>
 
                     }
                     

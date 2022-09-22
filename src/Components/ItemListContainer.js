@@ -1,10 +1,10 @@
-import ItemList from './ItemList';
+import {ItemList} from './ItemList';
 import customFetch from "../Others/customFetch";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 const { products } = require('../Others/products');
 
-const ItemListContainer = () => {
+export const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
 
@@ -17,7 +17,7 @@ const ItemListContainer = () => {
         }))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
-    }, [idCategory]);
+    }, [datos]);
 
 
 

@@ -52,6 +52,21 @@ const Countamount = styled.div`
     margin: 5px;
 `;
 
+const ButtonCount = styled.button`
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background-color: #B8E4E7;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    text-decoration: none;
+    color: #000;
+    transform: scale(0.97);
+`;
+
 
 //ItemList
 const ProductsContainer = styled.div`
@@ -165,12 +180,62 @@ const Spindit = styled.div`
     align-items: flex-end;
 `;
 
+// Cart 
+
+const TopCart = styled.div`
+    argin-top: 180px;
+    min-height: 80vh;
+    width: 100%;
+    max-width: 1280px;
+    margin: 180px auto 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const CartButton = styled.button`
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background-color: #D65D20;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    text-decoration: none;
+    color: #000;
+    transform: scale(0.97);
+`;
+
+const TopText = styled.text`
+    margin: 0px 10px;
+`;
+
+const ImgCart = styled.img`
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+`;
+
+const InfCart = styled.div`
+    flex: 3;   
+`;
+
+const SumCart = styled.div`
+    display_ flex;
+    aling-items: center;
+    justify-content: space-between;
+    padding: 20px;
+`;
+
 
 
 export { 
     Container, Logo, NavItem, ItemL, ItemC, ItemR, 
     Countcont, Countamount, 
     ProductsContainer, ItemCont,
-    Image, Info, Icon,
-    DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit
+    Image, Info, Icon, ButtonCount,
+    DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit,
+    TopCart, CartButton, TopText, ImgCart
 }
