@@ -10,18 +10,10 @@ const products = [
       "https://img.freepik.com/premium-psd/ticket-with-editable-color-mockup_149660-80.jpg?w=2000"
     ],
     sales: 0,
-    createdAt: "2021-09-18T05:11:04.952Z",
-    updatedAt: "2021-09-18T19:39:05.347Z",
     categoryId: 1,
-    brandId: 20,
-    packingId: null,
     category: {
       name: "Lollapalooza",
       id: 1
-    },
-    brand: {
-      id: 20,
-      name: "Arg"
     },
     reviews: []
   },
@@ -36,18 +28,12 @@ const products = [
       "https://gitu.net/gituimg/free-psd-mockups-download/free-tickets-mockup-psd.jpg"
     ],
     sales: 0,
-    createdAt: "2021-09-18T05:11:04.952Z",
-    updatedAt: "2021-09-18T19:39:05.347Z",
     categoryId: 2,
     brandId: 21,
     packingId: null,
     category: {
       name: "Teatro",
       id: 2
-    },
-    brand: {
-      id: 21,
-      name: "Colon"
     },
     reviews: [
       {
@@ -67,18 +53,11 @@ const products = [
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e1ffe888675889.5e4c0d5cb6051.jpg"
     ],
     sales: 0,
-    createdAt: "2021-09-18T05:11:04.952Z",
-    updatedAt: "2021-09-20T16:10:21.030Z",
     categoryId: 3,
     brandId: 22,
-    packingId: null,
     category: {
       name: "Forja",
       id: 3
-    },
-    brand: {
-      id: 22,
-      name: ""
     },
     reviews: []
   },
@@ -93,18 +72,11 @@ const products = [
       "https://cdn.dribbble.com/users/4470607/screenshots/8525239/untitled-1_4x.jpg"
     ],
     sales: 0,
-    createdAt: "2021-09-18T05:11:04.952Z",
-    updatedAt: "2021-09-20T16:10:21.032Z",
     categoryId: 4,
     brandId: 23,
-    packingId: null,
     category: {
       name: "Oktoberfest",
       id: 4
-    },
-    brand: {
-      id: 23,
-      name: "Villa Gral Belgrano"
     },
     reviews: []
   },
