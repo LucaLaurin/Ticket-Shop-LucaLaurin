@@ -36,10 +36,10 @@ export const Cart = () => {
       alert(`El id de tu orden de compra es: ${newOrderRef.id}`)
       clear();
 
-      itemsForDb.map(async (Item) => {
-        const itemRef = doc(db, "Productos", Item.id);
-        await updateDoc (ItemRef, {
-          stock: increment(-Item.quantity)
+      itemsForDb.map(async (item) => {
+        const itemRef = doc(db, "Productos", item.id);
+        await updateDoc (itemRef, {
+          stock: increment(-item.quantity)
         });
       })
     };
@@ -53,16 +53,16 @@ export const Cart = () => {
             cartList.length > 0 ? <div>
               <div>
                 {
-                  cartList.map(Item=><div key={Item.id} >
-                    <ImgCart src={Item.image} alt={Item.image}/>
+                  cartList.map(item=><div key={item.id} >
+                    <ImgCart src={item.image} alt={item.image}/>
                     <div>
-                      <h2>{Item.name}</h2>
-                      <p>Precio: {Item.cost}</p>
-                      <p>Cantidad: {Item.quantity}</p>
-                      <p>Precio unidad: $ {Item.cost.toFixed(2)}</p>
-                      <p>Precio total: $ {(Item.cost*Item.quantity).toFixed(2)}</p>
+                      <h2>{item.name}</h2>
+                      <p>Precio: {item.cost}</p>
+                      <p>Cantidad: {item.quantity}</p>
+                      <p>Precio unidad: $ {item.cost.toFixed(2)}</p>
+                      <p>Precio total: $ {(item.cost*item.quantity).toFixed(2)}</p>
                     </div>
-                        <CartButton onClick={() => removeItem(Item.id)}> Eliminar </CartButton>
+                        <CartButton onClick={() => removeItem(item.id)}> Eliminar </CartButton>
                     </div>)
                 }
               </div>

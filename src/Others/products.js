@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 11,
+    id: 1,
     name: "Concierto",
     stock: 2000,
     cost: 6800,
@@ -10,7 +10,7 @@ const products = [
       "https://img.freepik.com/premium-psd/ticket-with-editable-color-mockup_149660-80.jpg?w=2000"
     ],
     sales: 0,
-    categoryId: 1,
+    CategoryId: 1,
     category: {
       name: "Lollapalooza",
       id: 1
