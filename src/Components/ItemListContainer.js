@@ -1,6 +1,8 @@
-import {ItemList} from './ItemList';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
+
+
+import {ItemList} from './ItemList';
 
 //firebase
 import {db} from '../Others/firebaseConfig'
@@ -16,9 +18,9 @@ export const ItemListContainer = () => {
     const getData = async (idCategory) => {
         let q;
         if (idCategory) {
-            q = query(collection(db,"Productos"), where('CategoryId', '==', idCategory));
+            q = query(collection(db,"products"), where('categoryId', '==', idCategory));
         } else {
-            q = query(collection(db, "Productos"),orderBy('name'));
+            q = query(collection(db, "products"),orderBy('name'));
         }
         const querySnapshot = await getDocs(q);
         const dataFromFirestore = querySnapshot.docs.map(item => ({
@@ -35,14 +37,13 @@ export const ItemListContainer = () => {
 
 
     return (
-        <>  
+         
         <div>
             {
             <ItemList items={datos}/>
             }
         </div>
-        </>
+        
     )
 };
 
-export default ItemListContainer;

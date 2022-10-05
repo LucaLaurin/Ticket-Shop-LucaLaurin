@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import {ItemDetail} from "./ItemDetail";
-import { doc, getDoc } from "firebase/firestore";
-import {db} from '../Others/firebaseConfig'
+import { useParams } from "react-router-dom";
+import { ItemDetail } from "./ItemDetail";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from '../Others/firebaseConfig'
 
 
 export const ItemDetailContainer = () => {
@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
 
 
     const getData = async (idItem) => {
-      const querySnapshot = await getDoc(doc(db,"Productos",idItem));
+      const querySnapshot = await getDoc(doc(db,"products",idItem));
       setDato({id: querySnapshot.id, ...querySnapshot.data()});
     };
 
@@ -26,4 +26,3 @@ export const ItemDetailContainer = () => {
     );
 }
 
-export default ItemDetailContainer;

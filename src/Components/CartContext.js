@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import React from 'react';
 
 export const CartContext = createContext();
 
@@ -11,7 +12,7 @@ export const CartContextProvider = ({children}) => {
 
     const addItem = (item, quantity) => {
         if (isInCart(item.id)) {
-            const repeat = cartList.find(product => product.id === item.id);
+            const repeat = cartList.find(products => products.id === item.id);
             // Luego de almacenar el producto en la variable repeat, revisamos si la cantidad de stock es suficiente
             if ((repeat.quantity + quantity)> item.stock) {
                 alert('El stock del producto no es suficiente, revisa tu carrito.')

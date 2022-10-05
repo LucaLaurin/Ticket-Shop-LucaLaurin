@@ -2,28 +2,27 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ItemCount } from './ItemCount';
 import { CartContext } from './CartContext';
-import Spinner from './Spinner';
+import React from 'react';
 
 import { DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit } from './styles';
 import Button from 'react-bootstrap/Button';
 
 export const ItemDetail = ({ item }) => {
     const { addItem } = useContext(CartContext);
-    const [itemCount, setItemCount] = useState(0);
+    const [count, setcount] = useState(0);
    
 
     const onAdd = (quantity) => {
         alert("Usted selecciono " + quantity + " items.");
         addItem(item, quantity);
-        setItemCount(quantity);
+        setcount(quantity);
        
     }
 
     return (
         <>
         {
-            item && item.image
-            ? 
+        
             <DetailCont>
                 <DetailDiv>
                     <ImgCont>
@@ -36,18 +35,15 @@ export const ItemDetail = ({ item }) => {
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoCont>
                     {
-                        itemCount === 0
-                        ?  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        item?.stock && count
+                        ?  <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                         :  <Link to= '/cart' ><Button variant="warning">Ir al carrito</Button></Link>
 
                     }
                     
                 </DetailDiv>
             </DetailCont>
-            : <Spindit><Spinner /></Spindit>
         }
         </>
     );
 }
-
-export default ItemDetail;

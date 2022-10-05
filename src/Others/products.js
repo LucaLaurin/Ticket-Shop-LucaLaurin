@@ -5,16 +5,12 @@ const products = [
     stock: 2000,
     cost: 6800,
     description: "Año a año #LollaAR se reafirma como la cita cultural más esperada por los argentinos. Por eso no sorprende que los fanáticos del festival hayan agotado las cinco instancias de preventa en tan solo unas pocas horas. ¡Los “Early Bird” y todos los tickets de preventa ya tienen dueños! La siguiente etapa de venta será tras el anuncio del lineup.",
-    capacity: 1500,
+    quantity: 1500,
     image: [
       "https://img.freepik.com/premium-psd/ticket-with-editable-color-mockup_149660-80.jpg?w=2000"
     ],
     sales: 0,
-    CategoryId: 1,
-    category: {
-      name: "Lollapalooza",
-      id: 1
-    },
+    categoryId: 1,
     reviews: []
   },
   {
