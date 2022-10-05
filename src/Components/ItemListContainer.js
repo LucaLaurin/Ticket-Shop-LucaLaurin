@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
         if (idCategory) {
             q = query(collection(db,"products"), where('categoryId', '==', idCategory));
         } else {
-            q = query(collection(db, "products"),orderBy('name'));
+            q = query(collection(db, "products"),orderBy('title'));
         }
         const querySnapshot = await getDocs(q);
         const dataFromFirestore = querySnapshot.docs.map(item => ({

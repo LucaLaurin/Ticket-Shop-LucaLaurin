@@ -8,13 +8,13 @@ import { faDollarSign, faTicket, faCircleInfo }  from "@fortawesome/free-solid-s
 export const Item = ({ item }) => {
     return (
         <ItemCont>
-            <Image src={item.pictureUrl} />
+            <Image src={item.img} />
             <Info>
                 <Icon>   
                     <div/><strong> {item.title}</strong>
                 </Icon>
                 <Icon>   
-                    <div/><strong> <FontAwesomeIcon icon={faDollarSign} />{item.price}</strong>
+                    <div/><strong> <FontAwesomeIcon icon={faDollarSign} />{item.cost}</strong>
                 </Icon>
                 <Icon>
                     <div/><FontAwesomeIcon icon={faTicket} />{item.stock} unid.
@@ -26,5 +26,3 @@ export const Item = ({ item }) => {
         </ItemCont>
     );
 }
-
-export default Item;

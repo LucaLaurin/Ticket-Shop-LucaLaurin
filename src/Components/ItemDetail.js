@@ -26,10 +26,10 @@ export const ItemDetail = ({ item }) => {
             <DetailCont>
                 <DetailDiv>
                     <ImgCont>
-                        <Detailimg src={item.image[0]} />
+                        <Detailimg src={item.img[0]} />
                     </ImgCont>
                     <InfoCont>
-                        <Title>{item.name}</Title>
+                        <Title>{item.title}</Title>
                         <Desc>{item.description}</Desc>
                         <Price>$ {item.cost.toFixed(2)}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>

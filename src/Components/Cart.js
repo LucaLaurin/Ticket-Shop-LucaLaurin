@@ -9,13 +9,12 @@ import { db } from '../Others/firebaseConfig';
 
 
 export const Cart = () => {
-
-    const { cartList, clear, removeItem, calcItemsTotal } = useContext(CartContext);
+  const { cartList, clear, removeItem, calcItemsTotal } = useContext(CartContext);
 
     const createOrder = async () => {
       const itemsForDb = cartList.map(item => ({
         id: item.id,
-        title: item.name,
+        title: item.title,
         price: item.cost,
         quantity: item.quantity,
       }));
@@ -54,9 +53,9 @@ export const Cart = () => {
               <div>
                 {
                   cartList.map(item=><div key={item.id} >
-                    <ImgCart src={item.image} alt={item.image}/>
+                    <ImgCart src={item.img} alt={item.img}/>
                     <div>
-                      <h2>{item.name}</h2>
+                      <h2>{item.title}</h2>
                       <p>Precio: {item.cost}</p>
                       <p>Cantidad: {item.quantity}</p>
                       <p>Precio unidad: $ {item.cost.toFixed(2)}</p>
