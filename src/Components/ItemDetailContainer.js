@@ -6,13 +6,13 @@ import { db } from '../Others/firebaseConfig'
 
 
 export const ItemDetailContainer = () => {
-    const [dato, setDato] = useState({});
+    const [item, setItem] = useState({});
     const { idItem } = useParams();
 
 
     const getData = async (idItem) => {
       const querySnapshot = await getDoc(doc(db,"products",idItem));
-      setDato({id: querySnapshot.id, ...querySnapshot.data()});
+      setItem({id: querySnapshot.id, ...querySnapshot.data()});
     };
 
     useEffect (() => {
@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
         
     
     return (
-      <ItemDetail item={dato} />
+      <ItemDetail item={item} />
     );
 }
 

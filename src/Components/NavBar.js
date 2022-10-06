@@ -14,16 +14,16 @@ export const NavBar = () => {
       </ItemL>
       <ItemC className="justify-content-center" activeKey="/home">
         <Nav.Item>
-        <Link to='/category/1' style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
+        <Link to='/category/Conciertos' style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/2' style={{textDecoration: "none", color: "black"}}><NavItem>Teatro</NavItem></Link>
+        <Link to='/category/Teatro' style={{textDecoration: "none", color: "black"}}><NavItem>Teatro</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/3' style={{textDecoration: "none", color: "black"}}><NavItem>Eventos</NavItem></Link>
+        <Link to='/category/Eventos' style={{textDecoration: "none", color: "black"}}><NavItem>Eventos</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/4' style={{textDecoration: "none", color: "black"}}><NavItem>Fiestas</NavItem></Link>
+        <Link to='/category/Fiestas' style={{textDecoration: "none", color: "black"}}><NavItem>Fiestas</NavItem></Link>
         </Nav.Item>
       </ItemC>
       <ItemR>
@@ -34,5 +34,4 @@ export const NavBar = () => {
   );
 }
 
-export default NavBar;
 

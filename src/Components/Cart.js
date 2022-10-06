@@ -22,7 +22,7 @@ export const Cart = () => {
         buyer:{
           name: "Leo Messi",
           email: "leomessi@mail.com",
-          phone: "123-456-1234",
+          phone: "1234561234",
         },
         date: serverTimestamp(),
         items: itemsForDb,
@@ -32,7 +32,6 @@ export const Cart = () => {
       const newOrderRef = doc(collection(db, "orders"))
       await setDoc(newOrderRef, order);
 
-      alert(`El id de tu orden de compra es: ${newOrderRef.id}`)
       clear();
 
       itemsForDb.map(async (item) => {
@@ -52,16 +51,16 @@ export const Cart = () => {
             cartList.length > 0 ? <div>
               <div>
                 {
-                  cartList.map(item=><div key={item.id} >
-                    <ImgCart src={item.img} alt={item.img}/>
+                  cartList.map(cart=><div key={cart.id} >
+                    <ImgCart src={cart.img} alt={cart.img}/>
                     <div>
-                      <h2>{item.title}</h2>
-                      <p>Precio: {item.cost}</p>
-                      <p>Cantidad: {item.quantity}</p>
-                      <p>Precio unidad: $ {item.cost.toFixed(2)}</p>
-                      <p>Precio total: $ {(item.cost*item.quantity).toFixed(2)}</p>
+                      <h2>{cart.title}</h2>
+                      <p>Precio: {cart.cost}</p>
+                      <p>Cantidad: {cart.quantity}</p>
+                      <p>Precio unidad: $ {cart.cost.toFixed(2)}</p>
+                      <p>Precio total: $ {(cart.cost*cart.quantity).toFixed(2)}</p>
                     </div>
-                    <CartButton onClick={() => removeItem(item.id)}> Eliminar </CartButton>
+                    <CartButton onClick={() => removeItem(cart.id)}> Eliminar </CartButton>
                   </div>)
                 }
               </div>

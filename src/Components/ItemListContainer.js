@@ -9,7 +9,7 @@ import {db} from '../Others/firebaseConfig'
 import {  getDocs, collection, query, where, orderBy } from "firebase/firestore";
 
 export const ItemListContainer = () => {
-    const [datos, setDatos] = useState([]);
+    const [items, setItems] = useState([]);
     const { idCategory } = useParams();
 
 
@@ -27,7 +27,7 @@ export const ItemListContainer = () => {
             id: item.id,
             ...item.data(),
         }))
-        setDatos(dataFromFirestore);
+        setItems(dataFromFirestore);
 
     }
 
@@ -40,7 +40,7 @@ export const ItemListContainer = () => {
          
         <div>
             {
-            <ItemList items={datos}/>
+            <ItemList items={items}/>
             }
         </div>
         
