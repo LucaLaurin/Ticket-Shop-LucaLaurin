@@ -26,7 +26,7 @@ export const ItemDetail = ({ item }) => {
             <DetailCont>
                 <DetailDiv>
                     <ImgCont>
-                        <Detailimg src={item.img[0]} />
+                        <Detailimg src={item.img} />
                     </ImgCont>
                     <InfoCont>
                         <Title>{item.title}</Title>
@@ -35,7 +35,7 @@ export const ItemDetail = ({ item }) => {
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoCont>
                     {
-                        item?.stock && count
+                        item.stock && count === 0 
                         ?  <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                         :  <Link to= '/cart' ><Button variant="warning">Ir al carrito</Button></Link>
 
