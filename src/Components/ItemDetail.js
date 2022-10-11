@@ -31,7 +31,7 @@ export const ItemDetail = ({ item }) => {
                     <InfoCont>
                         <Title>{item.title}</Title>
                         <Desc>{item.description}</Desc>
-                        <Price>$ {item.cost.toFixed(2)}</Price>
+                        <Price>$ {item.cost}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoCont>
                     {
