@@ -40,7 +40,7 @@ export const ItemDetail = ({ item }) => {
                         :  <Link to= '/cart' ><Button variant="warning">Ir al carrito</Button></Link>
 
                     }
-                    
+                    <Spindit></Spindit>
                 </DetailDiv>
             </DetailCont>
         }

@@ -1,0 +1,82 @@
+/* cart widget */
+
+.buttonCart {
+    background-color: #fff;
+    color: #000;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.4rem;
+    transition: all .5s linear;
+    text-decoration: none;
+}
+
+.buttonCart:hover {
+    background-color: rgba(201, 198, 198, 0.897);
+}
+
+.buttonCount {
+    background-color: #b5bb5d;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: -2.5px;
+    user-select: none;
+}
+
+/* FormComp */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.formIn {
+    padding: .5rem .7rem;
+    border: .5px solid #e9e9e9;
+    border-radius: .6rem;
+}
+
+.formErr {
+    color: rgb(180, 182, 165);
+    font-size: .8rem;
+}
+
+.formCont {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.formBtt {
+    padding: .6rem 1rem;
+    border-radius: .6rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background-color: #b5bb5d;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    color: #000;
+}
+
+.formBtn:active {
+    transform: scale(0.97);
+}

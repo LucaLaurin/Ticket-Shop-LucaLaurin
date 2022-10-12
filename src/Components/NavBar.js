@@ -1,6 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import React from 'react';
-import CartWidget from './CartWidget';
+import {CartWidget} from './CartWidget';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceGrinWink }  from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -14,16 +14,16 @@ export const NavBar = () => {
       </ItemL>
       <ItemC className="justify-content-center" activeKey="/home">
         <Nav.Item>
-        <Link to='/category/Conciertos' style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
+        <Link to='/item/9PAURSiMK0dPTDEXOkl0' style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/Teatro' style={{textDecoration: "none", color: "black"}}><NavItem>Teatro</NavItem></Link>
+        <Link to='/item/e1meso2JExjJIDMSA5d1' style={{textDecoration: "none", color: "black"}}><NavItem>Teatro</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/Eventos' style={{textDecoration: "none", color: "black"}}><NavItem>Eventos</NavItem></Link>
+        <Link to='/item/foFTk7BiSNYWF6R0IKtd' style={{textDecoration: "none", color: "black"}}><NavItem>Eventos</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to='/category/Fiestas' style={{textDecoration: "none", color: "black"}}><NavItem>Fiestas</NavItem></Link>
+        <Link to='/item/dwyoJPS9JHlnWws07YBI' style={{textDecoration: "none", color: "black"}}><NavItem>Fiestas</NavItem></Link>
         </Nav.Item>
       </ItemC>
       <ItemR>

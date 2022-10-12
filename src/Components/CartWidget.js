@@ -1,21 +1,21 @@
-import  { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping }  from "@fortawesome/free-solid-svg-icons";
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import {IoCart} from 'react-icons/io5';
 import { CartContext } from "./CartContext";
 
-export const CartWIdget = () => {
+import '../Others/styles.css'
+
+
+export const CartWidget = () => {
 
   const { calcItemsQty } = useContext(CartContext);
-  
+
   return (
-
-    <div>
-      <FontAwesomeIcon icon={ faCartShopping }/> 
-      {
-         calcItemsQty() > 0 && <span>{calcItemsQty()}</span>
-      }
-    </div>
-  );
-}
-
-export default  CartWIdget;
+    <NavLink className='buttonCart' to='/cart'>
+        <IoCart />
+        {
+          calcItemsQty() > 0 && <span className='buttonCount'>{calcItemsQty()}</span>
+        }
+    </NavLink>
+  )
+};

@@ -183,14 +183,16 @@ const Spindit = styled.div`
 // Cart 
 
 const TopCart = styled.div`
-    argin-top: 180px;
-    min-height: 80vh;
-    width: 100%;
-    max-width: 1280px;
-    margin: 180px auto 0px;
     display: flex;
+    flex-basis: 75%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
 `;
 
 const CartButton = styled.button`
@@ -201,7 +203,7 @@ const CartButton = styled.button`
     font-size: .9rem;
     font-weight: 700;
     letter-spacing: .5px;
-    background-color: #D65D20;
+    background-color: #b5bb5d;
     box-shadow: 2px 2px 25px -7px #4c4c4c;
     text-decoration: none;
     color: #000;
@@ -209,7 +211,14 @@ const CartButton = styled.button`
 `;
 
 const TopText = styled.text`
-    margin: 0px 10px;
+    margin-top: 180px;
+    min-height: 80vh;
+    width: 100%;
+    max-width: 1280px;
+    margin: 180px auto 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const ImgCart = styled.img`
@@ -219,14 +228,14 @@ const ImgCart = styled.img`
 `;
 
 const InfCart = styled.div`
-    flex: 3;   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;   
 `;
 
-const SumCart = styled.div`
-    display_ flex;
-    aling-items: center;
-    justify-content: space-between;
-    padding: 20px;
+const Carttitle = styled.div`
+    margin-bottom: 2rem
 `;
 
 
@@ -237,5 +246,5 @@ export {
     ProductsContainer, ItemCont,
     Image, Info, Icon, ButtonCount,
     DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit,
-    TopCart, CartButton, TopText, ImgCart
+    TopCart, CartButton, TopText, ImgCart, InfCart, Carttitle
 }
