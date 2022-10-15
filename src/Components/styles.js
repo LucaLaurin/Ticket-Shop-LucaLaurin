@@ -77,6 +77,20 @@ const ProductsContainer = styled.div`
     justify-content: center;
 `;
 
+//ItemListContainer
+
+const cardContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    width: 90%;
+    min-height: 70vh;
+`;
+
 //Item
 const Info = styled.div`
     opacity: 0;
@@ -132,16 +146,11 @@ const Icon = styled.div`
 
 //ItemDetail
 const DetailCont = styled.div`
-    padding: 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-end;
-`;
-
-const DetailDiv = styled.div`
-    padding: 50px;
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
 `;
 
 const ImgCont = styled.div`
@@ -149,27 +158,38 @@ const ImgCont = styled.div`
 `;
 
 const Detailimg = styled.img`
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
+    width: 350px;
+    position: absolute;
+    left: -50px;
+    top: 60px;
+    border-radius: .5rem;
+    filter: saturate(120%) contrast(110%) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    user-select: none;
 `;
 
 const InfoCont = styled.div`
-    flex: 1;
-    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0rem 0rem 20rem;
+    min-height: 400px;
+    height: auto;
+    gap: .7rem
 `;
 
 const Title = styled.h1`
-    font-weight: 200;
+    font-size: 1.5em;
+    font-weight: 700;
 `;
 
 const Desc = styled.p`
-    margin: 20px 0px;
+    font-size: 1.5em;
+    font-weight: 700;
 `;
 
 const Price  = styled.span`
-    font-weight: 100;
-    font-size: 40px;
+    color: #ff898d;
+    font-size: 2.9em
 `;
 
 const Spindit = styled.div`
@@ -245,6 +265,6 @@ export {
     Countcont, Countamount, 
     ProductsContainer, ItemCont,
     Image, Info, Icon, ButtonCount,
-    DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit,
-    TopCart, CartButton, TopText, ImgCart, InfCart, Carttitle
+    DetailCont, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit,
+    TopCart, CartButton, TopText, ImgCart, InfCart, Carttitle, cardContainer
 }

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { ItemCount } from './ItemCount';
 import { CartContext } from './CartContext';
 import React from 'react';
+import spin from './Spinner'
 
-import { DetailCont, DetailDiv, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit } from './styles';
+import { DetailCont, ImgCont, Detailimg, InfoCont, Title, Desc, Price, Spindit } from './styles';
 import Button from 'react-bootstrap/Button';
 
 export const ItemDetail = ({ item }) => {
@@ -24,7 +25,7 @@ export const ItemDetail = ({ item }) => {
         {
         
             <DetailCont>
-                <DetailDiv>
+                <DetailCont>
                     <ImgCont>
                         <Detailimg src={item.img} />
                     </ImgCont>
@@ -40,8 +41,8 @@ export const ItemDetail = ({ item }) => {
                         :  <Link to= '/cart' ><Button variant="warning">Ir al carrito</Button></Link>
 
                     }
-                    <Spindit></Spindit>
-                </DetailDiv>
+                    <Spindit>{spin}</Spindit>
+                </DetailCont>
             </DetailCont>
         }
         </>
