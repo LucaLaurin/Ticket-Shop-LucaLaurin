@@ -14,7 +14,6 @@ export const ItemDetail = ({ item }) => {
    
 
     const onAdd = (quantity) => {
-        alert("Usted selecciono " + quantity + " items.");
         addItem(item, quantity);
         setcount(quantity);
        

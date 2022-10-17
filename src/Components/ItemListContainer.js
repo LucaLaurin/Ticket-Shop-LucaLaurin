@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { cardContainer } from './styles';
 import {ItemList} from './ItemList';
 
 //firebase
@@ -38,11 +37,11 @@ export const ItemListContainer = () => {
 
     return (
          
-        <cardContainer>
+        <div>
             {
             <ItemList items={items}/>
             }
-        </cardContainer>
+        </div>
         
     )
 };

@@ -14,7 +14,7 @@ export const NavBar = () => {
       </ItemL>
       <ItemC className="justify-content-center" activeKey="/home">
         <Nav.Item>
-        <Link to='/item/9PAURSiMK0dPTDEXOkl0' style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
+        <Link to="/item/9PAURSiMK0dPTDEXOkl0" style={{textDecoration: "none", color: "black"}}><NavItem>Conciertos</NavItem></Link>
         </Nav.Item>
         <Nav.Item>
         <Link to='/item/e1meso2JExjJIDMSA5d1' style={{textDecoration: "none", color: "black"}}><NavItem>Teatro</NavItem></Link>

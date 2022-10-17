@@ -21,7 +21,7 @@
 }
 
 .buttonCount {
-    background-color: #b5bb5d;
+    background-color: #cf4e37;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -34,6 +34,24 @@
     top: 0;
     right: -2.5px;
     user-select: none;
+}
+
+.cartContbtn {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background-color: #b5bb5d;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    text-decoration: none;
+    color: #000;
+}
+
+.cartConttitle {
+    margin-bottom: 2rem;
 }
 
 /* FormComp */

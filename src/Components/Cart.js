@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { IoTrash, IoCart } from "react-icons/io5";
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
 
-import {TopCart, TopText, ImgCart, CartButton, InfCart, Carttitle } from './styles'; 
+import {TopCart, TopText, ImgCart, CartButton, InfCart, Carttitle, cartItem, cartContList } from './styles'; 
 import {CartContext} from "./CartContext";
 import { db } from '../Others/firebaseConfig';
 
@@ -92,16 +92,16 @@ export const Cart = () => {
     
   
     return (
-      <TopText>
-        <h1>Carrito de compras</h1>
+      <TopCart>
+        <Carttitle>Carrito de compras</Carttitle>
         <InfCart>
-        <Link to="/"> <Button variant="warning">Seguir comprando</Button></Link>
-        <TopCart>
+        <Link to="/"> <CartButton >Seguir comprando</CartButton></Link>
+        <div>
           {
-            cartList.length > 0 ? <div>
+            cartList.length > 0 ? <cartContList>
               <div>
                 {
-                  cartList.map(cart=><div key={cart.id} >
+                  cartList.map(cart=><cartItem key={cart.id} >
                     <ImgCart src={cart.img} alt={cart.img}/>
                     <div>
                       <h2>{cart.title}</h2>
@@ -113,7 +113,7 @@ export const Cart = () => {
                     <CartButton onClick={() => removeItem(cart.id)}> Eliminar 
                       <IoTrash size={20}/>
                     </CartButton>
-                  </div>)
+                  </cartItem>)
                 }
               </div>
               {cartList.length > 0 &&
@@ -124,20 +124,20 @@ export const Cart = () => {
               <div>
                 
                 <CartButton   onClick={handleCart}> 
-                    <IoCart size={16}/> <span>Finalizar compra</span>
+                  <IoCart size={16}/> <span>Finalizar compra</span>
                 </CartButton>
   
                 <CartButton onClick={clear}>
-                  <IoTrash size={16}/> <span>Vaciar carrito</span><span>Vaciar carrito</span>
+                  <IoTrash size={16}/> <span>Vaciar carrito</span>
                 </CartButton>
               </div>
-            </div> : <>No hay productos en el carrito</>
+            </cartContList> : <>No hay productos en el carrito</>
           }
-        </TopCart>
+        </div>
         </InfCart>
         
         
-      </TopText>
+      </TopCart>
     )
 };
 
